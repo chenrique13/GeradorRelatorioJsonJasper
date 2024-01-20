@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d531ff08-17de-4ae6-8219-00a561c0ecaf">
+	<parameter name="IMAGEM" class="java.lang.String"/>
+	<parameter name="IMAGEM64" class="java.awt.Image"/>
+	<parameter name="TITULO" class="java.lang.String"/>
+	<field name="descricao" class="java.lang.String"/>
+	<field name="tipoLancamento.descricao" class="java.lang.String"/>
+	<field name="valor" class="java.lang.Double"/>
+	<field name="mes" class="java.lang.Integer"/>
+	<field name="ano" class="java.lang.Integer"/>
+	<field name="valorFormatado" class="java.lang.String"/>
+	<title>
+		<band height="78" splitType="Stretch">
+			<line>
+				<reportElement x="2" y="0" width="553" height="1" uuid="e643ca52-3c79-45b5-a9a8-df4ecadbe090"/>
+			</line>
+			<line>
+				<reportElement x="555" y="0" width="1" height="64" uuid="2e7c2ca0-485c-431c-a4b4-404ca3ccd926"/>
+			</line>
+			<textField>
+				<reportElement x="169" y="10" width="220" height="40" uuid="d8534097-3867-44f5-b6a6-2321026928fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="DejaVu Sans" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TITULO}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="1" width="1" height="63" uuid="1a9647d4-7497-4a2b-83fc-9ed9f52d18a5"/>
+			</line>
+			<image>
+				<reportElement x="20" y="2" width="60" height="60" uuid="ad6a0a31-867d-4732-a03d-dbc8cfc7d435"/>
+				<imageExpression><![CDATA[$P{IMAGEM}]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="3" y="64" width="553" height="1" uuid="dc51e617-5837-4a14-8adf-13e87ff45a85"/>
+			</line>
+			<image>
+				<reportElement x="480" y="2" width="60" height="60" uuid="d792a2a7-a20d-4017-bc3f-7dfcb5ee5a92"/>
+				<imageExpression><![CDATA[$P{IMAGEM64}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="46">
+			<staticText>
+				<reportElement x="206" y="7" width="143" height="19" uuid="e152af58-d0a1-486f-bdcd-6b67615980fe"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Extrato Bancário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3" y="26" width="187" height="19" uuid="5d8ce22b-4b80-49b7-b07e-5e40a53ba489"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descrição]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="26" width="91" height="19" uuid="ddc59b14-6e71-43c5-8cce-ed9f149706b2"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="281" y="26" width="91" height="19" uuid="ea488b46-15d6-4ae7-a312-625fe22e76d8"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="372" y="26" width="91" height="19" uuid="0fd2e58f-43ce-43e8-8add-7868cf198139"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mês]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="26" width="91" height="19" uuid="38a6a945-67a4-43d4-a287-ae6af72c054f"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ano]]></text>
+			</staticText>
+			<line>
+				<reportElement x="1" y="45" width="553" height="1" uuid="5c8f6322-a08d-47fc-b8bd-206f95e0f9d2"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="0" width="187" height="20" uuid="7ef30d53-522e-4cee-bd1e-7933ded77f48"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="0" width="91" height="20" uuid="57bbf343-e0df-4917-af48-3a75fd2f5bac"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tipoLancamento.descricao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="281" y="0" width="91" height="20" uuid="a4612dab-1b52-4799-bcfc-4f01d7339917"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{valorFormatado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="372" y="0" width="91" height="20" uuid="8b9ad776-e031-494f-9c14-d0cbbcc98dff"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{mes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="0" width="91" height="20" uuid="aa01f51a-d533-4829-946b-736c60b247c1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="21" width="553" height="1" uuid="05f291a9-b8b3-4140-801a-f19f64910e43"/>
+			</line>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="228">
+			<barChart>
+				<chart evaluationTime="Report">
+					<reportElement x="1" y="2" width="553" height="224" uuid="c7d63dec-3b74-441a-a493-943f79cf4fbf"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Report"/>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{descricao}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{tipoLancamento.descricao}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{valor}]]></valueExpression>
+						<labelExpression><![CDATA[$F{valor}.toString()]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<barPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</barPlot>
+			</barChart>
+		</band>
+	</lastPageFooter>
+</jasperReport>
