@@ -1,10 +1,10 @@
-package br.com.pereira.carlos.teste_nttdata;
+package br.com.pereira.carlos.geradorRelatorio_nttdata;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TesteNttDataApplicationTests {
+class GeradorRelatorioNttDataApplicationTests {
 
 	@Test
 	void contextLoads() {
